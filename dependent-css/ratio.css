@@ -1,0 +1,109 @@
+/* stylelint-disable declaration-colon-space-after, function-calc-no-unspaced-operator */
+
+:root {
+	/* Ratio Properties
+	/* ====================================================================== */
+
+	--ratio-1x1:  1;
+	--ratio-3x2:  calc(2 / 3);
+	--ratio-4x3:  calc(3 / 4);
+	--ratio-16x9: calc(9 / 16);
+
+	/* Ratio (Percentage) Properties
+	/* ====================================================================== */
+
+	--ratio-1x1-p:  calc(var(--ratio-1x1)  * 100%);
+	--ratio-3x2-p:  calc(var(--ratio-3x2)  * 100%);
+	--ratio-4x3-p:  calc(var(--ratio-4x3)  * 100%);
+	--ratio-16x9-p: calc(var(--ratio-16x9) * 100%);
+
+	/* Named Ratio Properties
+	/* ====================================================================== */
+
+	--ratio-cinema: calc(1 / 2.39);
+	--ratio-golden: calc(1 / 1.618);
+	--ratio-square: var(--ratio-1x1);
+	--ratio-tv:     var(--ratio-4x3);
+	--ratio-wide:   var(--ratio-16x9);
+
+	/* Named Ratio (Percentage) Properties
+	/* ====================================================================== */
+
+	--ratio-cinema-p: calc(var(--ratio-cinema) * 100%);
+	--ratio-golden-p: calc(var(--ratio-golden) * 100%);
+	--ratio-square-p: var(--ratio-1x1-p);
+	--ratio-tv-p:     var(--ratio-4x3-p);
+	--ratio-wide-p:   var(--ratio-16x9-p);
+}
+
+/* Ratio Functional Classes
+/* ====================================================================== */
+
+%ratio {
+	display: block;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+	}
+
+	& > :first-child {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+%ratio-1x1 {
+	&::before {
+		padding-block-start: var(--ratio-1x1-p);
+	}
+}
+
+%ratio-3x2 {
+	&::before {
+		padding-block-start: var(--ratio-3x2-p);
+	}
+}
+
+%ratio-4x3 {
+	&::before {
+		padding-block-start: var(--ratio-4x3-p);
+	}
+}
+
+%ratio-16x9 {
+	&::before {
+		padding-block-start: var(--ratio-16x9-p);
+	}
+}
+
+/* Named Ratio (Percentage) Functional Classes
+/* ====================================================================== */
+
+%ratio-cinema {
+	&::before {
+		padding-block-start: var(--ratio-cinema-p);
+	}
+}
+
+%ratio-golden {
+	&::before {
+		padding-block-start: var(--ratio-golden-p);
+	}
+}
+
+%ratio-square {
+	@apply --ratio-1x1;
+}
+
+%ratio-tv {
+	@apply --ratio-tv;
+}
+
+%ratio-wide {
+	@apply --ratio-wide;
+}

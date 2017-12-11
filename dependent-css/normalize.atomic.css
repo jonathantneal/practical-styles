@@ -1,0 +1,52 @@
+/* Normalize Atomic Classes
+/* ========================================================================== */
+
+@import "./normalize";
+
+.normalize-a {
+	@extend %normalize-a;
+}
+
+.normalize-abbr-title {
+	@extend %normalize-abbr-title;
+}
+
+.normalize-button {
+	@extend %normalize-button;
+}
+
+.normalize-h1 {
+	@extend %normalize-h1;
+}
+
+.normalize-html {
+	@extend %normalize-html;
+}
+
+.normalize-input {
+	@extend %normalize-input;
+}
+
+.normalize-input-type-search {
+	@extend %normalize-input-type-search;
+}
+
+.normalize-pre {
+	@extend %normalize-pre;
+}
+
+.normalize-select {
+	@extend %normalize-select;
+}
+
+.normalize-small {
+	@extend %normalize-small;
+}
+
+.normalize-strong {
+	@extend %normalize-strong;
+}
+
+.normalize-textarea {
+	@extend %normalize-textarea;
+}

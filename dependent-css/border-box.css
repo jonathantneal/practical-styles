@@ -1,0 +1,8 @@
+/* Border Box Functional Classes
+/* ====================================================================== */
+
+%border-box {
+	&, &::before, &::after {
+		box-sizing: border-box;
+	}
+}

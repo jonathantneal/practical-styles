@@ -1,0 +1,52 @@
+{
+  "name": "practical-styles",
+  "description": "A collection of meaningful properties and functional classes designed to help you write cleaner, scalable, and easier to maintain CSS",
+  "version": "1.0.0",
+  "main": "dist/practical.atomic.css",
+  "style": "practical.css",
+  "files": [
+    "practical.css",
+    "practical.atomic.css",
+    "dependent-css",
+    "dist"
+  ],
+  "scripts": {
+    "clean": "git clean -X -d -f",
+    "start": "npm run start:css && npm run start:css:min",
+    "start:css": "echo 'Compiling CSS...'; postcss practical.atomic.css --map true --output dist/practical.atomic.css",
+    "start:css:min": "echo 'Compiling minified CSS...'; postcss practical.atomic.css --map true --compress true --output dist/practical.atomic.min.css",
+    "start:watch": "postcss practical.atomic.css --map true --watch --output dist/practical.atomic.css",
+    "test": "npm run test:css",
+    "test:css": "echo 'Testing CSS...'; stylelint --syntax scss *.css dependent-css/*.css"
+  },
+  "browserslist": [
+    "ie 11",
+    "last 2 android versions",
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 ios versions",
+    "last 2 safari versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.2.2",
+    "cssnano": "^3.10.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-dir-pseudo-class": "^2.1.0",
+    "postcss-extend-rule": "^1.1.0",
+    "postcss-import": "^11.0.0",
+    "postcss-logical": "^1.0.2",
+    "postcss-media-fn": "^3.0.0",
+    "postcss-media-minmax": "^3.0.0",
+    "postcss-nesting": "github:jonathantneal/postcss-nesting",
+    "pre-commit": "^1.2.2",
+    "stylelint": "^8.3.1",
+    "stylelint-config-dev": "^2.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-dev"
+  },
+  "private": true
+}

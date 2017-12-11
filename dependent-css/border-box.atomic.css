@@ -1,0 +1,14 @@
+/* Border Box Atomic Classes
+/* ========================================================================== */
+
+@import "./border-box";
+
+.border-box, .border-box-all {
+	@extend %border-box;
+}
+
+.border-box-all {
+	& * {
+		@extend %border-box;
+	}
+}

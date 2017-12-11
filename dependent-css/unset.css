@@ -1,0 +1,79 @@
+/* Unset Functional Classes
+/* ====================================================================== */
+
+%unset-a {
+	color: inherit;
+	text-decoration: none;
+}
+
+%unset-blockquote {
+	margin: 0;
+}
+
+%unset-body {
+	margin: 0;
+}
+
+%unset-button {
+	appearance: none;
+	background-color: transparent;
+	border-width: 0;
+	color: inherit;
+	font: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+%unset-fieldset {
+	border: 0 solid;
+	margin: 0;
+	padding: 0;
+}
+
+%unset-figure {
+	margin: 0;
+}
+
+%unset-h {
+	font-size: inherit;
+	font-weight: inherit;
+	margin-block: 0;
+}
+
+%unset-hr {
+	border-style: none;
+	margin-block: 0;
+}
+
+%unset-iframe {
+	border-style: none;
+}
+
+%unset-input {
+	background-color: transparent;
+	border-width: 0;
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+%unset-l {
+	list-style-type: none;
+	margin-block: 0;
+	padding-inline: 0;
+}
+
+%unset-legend {
+	padding-inline: 0;
+}
+
+%unset-p {
+	margin-block: 0;
+}
+
+%unset-pre {
+	font-family: inherit;
+	margin-block: 0;
+}

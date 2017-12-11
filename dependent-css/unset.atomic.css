@@ -1,0 +1,60 @@
+/* Unset Atomic Classes
+/* ========================================================================== */
+
+@import "./unset";
+
+.unset-a {
+	@extend %unset-a;
+}
+
+.unset-blockquote {
+	@extend %unset-blockquote;
+}
+
+.unset-body {
+	@extend %unset-body;
+}
+
+.unset-button {
+	@extend %unset-button;
+}
+
+.unset-fieldset {
+	@extend %unset-figure;
+}
+
+.unset-figure {
+	@extend %unset-figure;
+}
+
+.unset-h, .unset-h1, .unset-h2, .unset-h3, .unset-h4, .unset-h5, .unset-h6 {
+	@extend %unset-h;
+}
+
+.unset-hr {
+	@extend %unset-hr;
+}
+
+.unset-iframe {
+	@extend %unset-iframe;
+}
+
+.unset-input {
+	@extend %unset-input;
+}
+
+.unset-l, .unset-ol, .unset-ul {
+	@extend %unset-l;
+}
+
+.unset-legend {
+	@extend %unset-legend;
+}
+
+.unset-p {
+	@extend %unset-p;
+}
+
+.unset-pre {
+	@extend %unset-pre;
+}
